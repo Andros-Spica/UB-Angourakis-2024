@@ -15,9 +15,11 @@ Andreas Angourakis
 
 Esta sesión presenta la simulación como una metodología científica y describe su posible aplicación en arqueología, específicamente en el contexto de los sistemas socioecológicos.
 
-Realizaremos un breve ejercicio práctico centrado en los pasos iniciales cruciales del modelado de simulación: definir un sistema de interés en relación con nuestra pregunta/hipótesis y formalizar las entidades, los factores y las relaciones causales involucradas. Tenga en cuenta que no cubriremos los aspectos técnicos del modelado computacional o la programación. En cambio, utilizaremos técnicas de diagramación para realizar un ejercicio guiado "con lápiz y papel". Para realizar el ejercicio necesitarás:
+Realizaremos un breve ejercicio práctico centrado en los pasos iniciales cruciales del modelado de simulación: definir un sistema de interés en relación con nuestra pregunta/hipótesis y formalizar las entidades, los factores y las relaciones causales involucradas. Tenga en cuenta que no cubriremos los aspectos técnicos del modelado computacional o la programación. En cambio, utilizaremos técnicas de diagramación para realizar un ejercicio guiado "con lápiz y papel". 
+
+Para realizar el ejercicio necesitarás:
 - Lápiz y papel o su plataforma digital de dibujo preferida (*tablet*, *laptop*).
-- Un tema de interés en arqueología, preferiblemente uno que conozca o en el que haya pensado en términos de explicaciones (por ejemplo, variación en el estilo de cerámica como se explica por el aumento del comercio con otra región, posición de las fortificaciones como se explica por su visibilidad, disminución de la abundancia de una especie animal salvaje como se explica por la caza excesiva).
+- Un tema de interés en arqueología, preferiblemente uno que conozca o en el que haya pensado en términos de explicaciones (por ejemplo, variación en el estilo de cerámica *explicada* por el aumento del comercio con otra región, posición de las fortificaciones *explicada* por su visibilidad, disminución de la abundancia de una especie animal salvaje *explicada* por la caza excesiva).
 
 ## Índice
 
@@ -34,11 +36,12 @@ Realizaremos un breve ejercicio práctico centrado en los pasos iniciales crucia
 
 ## Ejercicio: diseño o modelización conceptual  
 
-El objetivo de este ejercicio es introducir la primera y más importante etapa en la aplicación de la simulación, **definición del sistema** y **diseño del modelo**, a temas de arqueología.
+El objetivo de este ejercicio es introducir la primera y más importante etapa en la aplicación de simulación: **definición del sistema** y **diseño del modelo**.
 
-Dado un tema general de interés asociado a un cierto tipo de evidencia arqueológica, debemos producir un modelo conceptual que contenga una definición de las características mínimas de un fenómeno o sistema (*representación*), con vistas a su formalización matemática (*mecanismo*), de manera que contribuya a la respuesta a una o más preguntas de investigación o a refutar o reformular una hipótesis de trabajo (*validación*).
+Dado un tema general de interés asociado a un cierto tipo de evidencia arqueológica, debemos producir un modelo conceptual que contenga una definición de las características mínimas de un fenómeno o sistema (*representación*), con vistas a su formalización matemática (*mecanismo*), de manera que contribuya a la respuesta a una o más preguntas de investigación, o a refutar o reformular una hipótesis de trabajo (*validación*).
 
-Este ejercicio refleja la naturaleza exploratoria del modelado explicativo, donde es clave cubrir el máximo de explicaciones potenciales a partir de nuestro conocimiento previo, pero también debemos avanzar parsimoniosamente hacia la definición de un modelo computacional (*implementación*) que sea inteligible y computable en un período de tiempo razonable.
+Este ejercicio refleja la naturaleza exploratoria del modelado explicativo. En éste es clave cubrir el máximo de 
+**explicaciones potenciales** a partir de nuestro conocimiento previo, pero también avanzar parsimoniosamente hacia la definición de un **modelo computacional** (*implementación*) que sea inteligible y computable en un período de tiempo razonable.
 
 ### Evidencias arqueológicas y sus interpretaciones (*explicaciones*)
 
@@ -54,7 +57,13 @@ Se anima a elegir el campo de la arqueología y proponer el proceso en el pasado
 | datación C14 más antigua de la presencia de plantas y animales domesticados en yacimientos distribuidos por toda una región | crecimiento demográfico y migración, interacción entre grupos con y sin domesticación (intercambio, asimilación, conflicto, etc.) | competencia de habitat entre grupos agropastores y cazadores-recolectores |
 | volumen de un mineral extraído en un yacimiento con la minería, duración de la ocupación y actividad | subsistencia y liberación del trabajo, toma de decisiones sobre intensidad minera, uso e intercambio de minerales | modelo de especialización económica |
 
-Tal vez prefieras delimitar primero un conjunto de tipos de evidencia arqueológica y luego identificar lo que crees que es la explicación más probable y/o más sólida en términos de proceso generativo (de izquierda a derecha en la tabla). Sin embargo, es igualmente válido comenzar considerando un fenómeno que ha sido documentado, estudiado y definido en otras disciplinas (por ejemplo, el comercio, desde una comprensión de la economía y la antropología), asumir que existió en un cierto contexto en el pasado y buscar dominios relevantes de evidencia que podrían apoyar o socavar dicha explicación (de derecha a izquierda en la tabla). En ambas rutas, no hay atajos; la solidez de la explicación dependerá de la profundidad y la amplitud del conocimiento previo sobre la evidencia y los fenómenos.
+Existen al menos tres maneras de empezar esta etapa:
+
+1. De la evidencia al mecanismo: delimitar primero un conjunto de tipos de evidencia arqueológica y luego identificar lo que crees que es la explicación más probable y/o más sólida en términos de proceso generativo (de izquierda a derecha en la tabla).  
+2. Del fenómeno a la evidencia y al mecanismo: considerar primero un fenómeno ya documentado, estudiado y definido en otras disciplinas (por ejemplo, el comercio, desde una comprensión de la economía y la antropología). Luego, asumiendo que esté existió en un cierto contexto en el pasado, busca los dominios relevantes de evidencia que podrían apoyar o refutar dicha explicación (del medio a izquierda en la tabla). Asimismo, busca o formula un mecanismo que representa satisfactoriamente el fenómeno, tal cual definido previamente (del medio a la derecha de la tabla).
+3. Del mecanismo al fenómeno y evidencia: teniendo bajo foco un mecanismo (i.e. un modelo ya formalizado), buscar a un fenómeno y evidencias relacionadas que sean compatibles (i.e., que se puedan explicar a través del mecanismo).
+
+En todas rutas, no hay atajos: la solidez de la explicación dependerá de la profundidad y la amplitud del conocimiento previo sobre la evidencia y los fenómenos.
 
 ### Esbozo de un modelo conceptual *para modelado de simulación*
 
