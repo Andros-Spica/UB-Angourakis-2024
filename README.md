@@ -105,9 +105,9 @@ o
 >settlementArea = *f*(población)
 >población = *g*(inmigración)
 
-donde *f* y *g* son funciones, aún por definir. Tales expresiones reformulan la explicación original de una manera más favourable a la formalización. Se leen como:
+donde *f* y *g* son funciones, aún por definir. Tales expresiones reformulan la explicación original de una manera más favorable a la formalización. Se leen como:
 
->El área de asentamiento (variable) es una función (depende de) la población (variable).
+>El área de asentamiento (variable) es una función (depende de) larable ión (variable).
 >La población (variable) es una función (depende) de la inmigración (variable).
 
 Sin ecuaciones para definir *f* y *g*, nuestro gráfico causal en realidad expresa más contenido, al leerse:
@@ -117,7 +117,7 @@ Sin ecuaciones para definir *f* y *g*, nuestro gráfico causal en realidad expre
 
 ### Hacia un equilibrio entre representación y complejidad
 
-¿Es ésta una descripción satisfactoria de nuestra explicación? ¿Deja de lado algo que asumimos implícitamente con nuestra primera explicación informal? ¿Está yendo demasiado lejos, afirmando algo que no pretendíamos en un principio? El criterio para responder a esta pregunta parte de la representación de la explicación informal y entra en el ámbito de la lógica y un conocimiento contextual más amplio.
+¿Es ésta una descripción satisfactoria de nuestra explicación? ¿Deja de lado algo que asumimos implícitamente con nuestra primera explicación informal? ¿Está yendo demasiado lejos, afirmando algo que no pretendíamos en un principio? El criterio para responder a estas preguntas parte de la representación de la explicación informal y entra en el ámbito de la **lógica** y un **conocimiento contextual** más amplio.
 
 En nuestro ejemplo, podemos detectar inmediatamente que nuestras variables deben expresarse en al menos dos unidades diferentes (por ejemplo, $m^{2}$ e individuos). Debemos agregar un parámetro (una variable que permanece constante durante todo el proceso) para convertir cantidades de población en cantidades de área de asentamiento:
 
