@@ -59,9 +59,9 @@ Se anima a elegir el campo de la arqueología y proponer el proceso en el pasado
 
 Existen al menos tres maneras de empezar esta etapa:
 
-1. De la evidencia al mecanismo: delimitar primero un conjunto de tipos de evidencia arqueológica y luego identificar lo que crees que es la explicación más probable y/o más sólida en términos de proceso generativo (de izquierda a derecha en la tabla).  
-2. Del fenómeno a la evidencia y al mecanismo: considerar primero un fenómeno ya documentado, estudiado y definido en otras disciplinas (por ejemplo, el comercio, desde una comprensión de la economía y la antropología). Luego, asumiendo que esté existió en un cierto contexto en el pasado, busca los dominios relevantes de evidencia que podrían apoyar o refutar dicha explicación (del medio a izquierda en la tabla). Asimismo, busca o formula un mecanismo que representa satisfactoriamente el fenómeno, tal cual definido previamente (del medio a la derecha de la tabla).
-3. Del mecanismo al fenómeno y evidencia: teniendo bajo foco un mecanismo (i.e. un modelo ya formalizado), buscar a un fenómeno y evidencias relacionadas que sean compatibles (i.e., que se puedan explicar a través del mecanismo).
+1. **De la evidencia al mecanismo**: delimitar primero un conjunto de tipos de evidencia arqueológica y luego identificar lo que crees que es la explicación más probable y/o más sólida en términos de proceso generativo (de izquierda a derecha en la tabla).  
+2. **Del fenómeno a la evidencia y al mecanismo**: considerar primero un fenómeno ya documentado, estudiado y definido en otras disciplinas (por ejemplo, el comercio, desde una comprensión de la economía y la antropología). Luego, asumiendo que esté existió en un cierto contexto en el pasado, busca los dominios relevantes de evidencia que podrían apoyar o refutar dicha explicación (del medio a izquierda en la tabla). Asimismo, busca o formula un mecanismo que representa satisfactoriamente el fenómeno, tal cual definido previamente (del medio a la derecha de la tabla).
+3. **Del mecanismo al fenómeno y evidencia**: teniendo bajo foco un mecanismo (i.e. un modelo ya formalizado), buscar a un fenómeno y evidencias relacionadas que sean compatibles (i.e., que se puedan explicar a través del mecanismo).
 
 En todas rutas, no hay atajos: la solidez de la explicación dependerá de la profundidad y la amplitud del conocimiento previo sobre la evidencia y los fenómenos.
 
@@ -69,34 +69,34 @@ En todas rutas, no hay atajos: la solidez de la explicación dependerá de la pr
 
 Un modelo conceptual puede expresarse aquí de varias maneras, por ejemplo como listas de elementos y relaciones, esquemas, diagramas, etc. Es decir, no forzaremos el uso de convenciones como [UML](https://en.wikipedia.org/wiki/Unified_Modeling_Language), aunque podría facilitar la siguiente etapa (*implementación*). Los ejemplos de diagramas UML también pueden ofrecer inspiración, incluso si no aprendes sus reglas. Otras convenciones más específicas también pueden ser muy útiles y relativamente fáciles de aprender:
 
-- [Causal, "stocks" y flujos, o diagramas de Forrester](https://en.wikipedia.org/wiki/System_dynamics): útiles para relacionar el cambio de variables agregadas (stocks) con parámetros y otras variables (flujos).
-- [Diagramas de flujo](https://en.wikipedia.org/wiki/Flowchart): útiles para representar flujos de lógica, especialmente procedimientos simples de toma de decisiones.
+- [Diagramas causales, de "stocks" y flujos, o de Forrester](https://en.wikipedia.org/wiki/System_dynamics): útiles para relacionar variables agregadas (stocks) con sus cambios (flujos), además de parámetros y otras variables. Lo usaremos para representar un sistema sin una representación explícita del tiempo.
+- [Diagramas de flujo](https://en.wikipedia.org/wiki/Flowchart): útiles para representar flujos de lógica, especialmente procedimientos simples y secuencia de toma de decisiones. Lo usaremos para describir*procesos* en un sistema o subsistema, es decir, representando explicitamente una serie de pasos en el tiempo.
 
 Vea algunos ejemplos de modelado conceptual en este tutorial: https://github.com/Andros-Spica/ABM-tutorial-koeln-2022?tab=readme-ov-file#conceptual-model
 
 ### El primer esbozo de un mecanismo
 
-La explicación seleccionada nunca es definitiva ni una declaración de creencias sesgadas (*mi* interpretación). Debería ser la chispa y la dirección de un proceso abierto en el que ordenamos nuestros conocimientos y creencias de fondo en busca de una coherencia lógica (formalización), los contrastamos con más evidencias (validación) y los revisamos o ampliamos.
+La explicación seleccionada nunca es una definitiva o final, ni tampoco una declaración de creencias sesgadas (*mi* interpretación). La explicación inicial debería ser la chispa de inspiración que dirige el cómo  ordenamos nuestros conocimientos y creencias en busca de una coherencia lógica (formalización) y contrastamos, revisamos y ampliamos éstos elementos con nuevas evidencias (validación).
 
-La formalización de una explicación es, de hecho, la tarea más difícil en el modelado de simulación, especialmente en dominios tan complejos como la arqueología. Implica, en primer lugar, una forma de pensar que va más allá de cualquier habilidad técnica, formación en matemáticas o jerga específica de la disciplina. Por lo tanto, debería ejercitarse en lugar de aprenderse.
+La **formalización de una explicación** es, de hecho, la tarea más difícil en el modelado de simulación, especialmente en dominios tan complejos como la arqueología. Implica, en primer lugar, una forma de pensar que va más allá de cualquier habilidad técnica, formación en matemáticas o jerga específica de la disciplina. Por lo tanto, debería *ejercitarse* en lugar de aprenderse.
 
-Si la explicación elegida está presente en modelos formales ya desarrollados por otros, felicitaciones, probablemente podrías saltear esto. Sin embargo, el uso, la adaptación o la combinación de modelos formales para su propia investigación requerirá una comprensión profunda de la formalización realizada y de cómo se relaciona con los términos de su propia evidencia, pregunta, etc.
+Si la explicación elegida ya está presente en modelos formales desarrollados por otros, probablemente podrías saltear esta etapa. Sin embargo, el uso, la adaptación o la combinación de modelos formales para otras líneas investigación requerirá una comprensión profunda de la formalización realizada y de cómo ésta se relaciona con los términos de vuestra evidencia, pregunta, etc.
 
-A modo de ejemplo, supongamos que postulamos que:
+A modo de ejemplo, imaginemos que en nuestra investigación postulamos que:
 
->el aumento de la superficie construida de un yacimiento arqueológico, que se supone que es un asentamiento, se explica por el crecimiento de la población debido a la afluencia migratoria.
+>el aumento de la superficie construida de un yacimiento arqueológico, que suponemos un asentamiento, se explica por el crecimiento de la población debido a la afluencia migratoria.
 
-Esta idea general podría expresarse de forma más esquemática como un conjunto de casos o escenarios. Aquí estamos limitados a dos:
+Esta idea general podría expresarse de forma más esquemática como un conjunto de **casos** o **escenarios**. Aquí estamos limitados a dos:
 
 >↑ inmigración → ↑ población → ↑ área de asentamiento
 
 >↓ inmigración → ↓ población → ↓ área de asentamiento
 
-También podemos simplificar esto dibujando un diagrama causal, un gráfico donde los nodos son las "cosas" que cambian (las *variables* que se van a cambiar) y los bordes o flechas marcan la dirección de la causalidad y el signo del efecto (positivo o negativo):
+También podemos simplificar esto dibujando un diagrama causal, un gráfico donde los nodos son las "cosas" que cambian (las *variables*), las flechas marcan la dirección del efecto o *causalidad*, y su signo (+ o -), el sentido del efecto (positivo o negativo):
 
 ![ejemplo de modelo conceptual inicial](images/conceptual-model-example-1.png)
 
-Si nos sentimos cómodos con el álgebra, podríamos intentar traducirlo a expresiones matemáticas:
+Si nos sentimos cómodos con expresiones algebraicas, podríamos intentar traducirlo a:
 
 >settlementArea = *f*(población) = *f*( *g*(inmigración) )
 
@@ -105,19 +105,19 @@ o
 >settlementArea = *f*(población)
 >población = *g*(inmigración)
 
-donde *f* y *g* son funciones, aún por definir. Tales expresiones reformulan la explicación original de una manera que es más amigable para una mayor formalización. Dicen:
+donde *f* y *g* son funciones, aún por definir. Tales expresiones reformulan la explicación original de una manera más favourable a la formalización. Se leen como:
 
 >El área de asentamiento (variable) es una función (depende de) la población (variable).
->La población (variable) es una función (depende de) la inmigración (variable).
+>La población (variable) es una función (depende) de la inmigración (variable).
 
-Sin ecuaciones para definir *f* y *g*, nuestro gráfico causal en realidad expresa más contenido al leer:
+Sin ecuaciones para definir *f* y *g*, nuestro gráfico causal en realidad expresa más contenido, al leerse:
 
->El área de asentamiento (variable) es una función (depende de) la población (variable) como un término positivo (+).
->La población (variable) es una función (depende de) la inmigración (variable) como un término positivo (+).
+>El área de asentamiento (variable) es una función (depende) de la población (variable) como un término positivo (+).
+>La población (variable) es una función (depende) de la inmigración (variable) como un término positivo (+).
 
 ### Hacia un equilibrio entre representación y complejidad
 
-¿Es esta una descripción satisfactoria de nuestra explicación? ¿Está dejando de lado algo que en realidad estamos entendiendo implícitamente con nuestra primera explicación informal? ¿Está yendo demasiado lejos, afirmando algo que no pretendíamos en un principio? El criterio para responder a esta pregunta parte de la representación de la explicación informal y entra en el ámbito de la lógica y un conocimiento contextual más amplio.
+¿Es ésta una descripción satisfactoria de nuestra explicación? ¿Deja de lado algo que asumimos implícitamente con nuestra primera explicación informal? ¿Está yendo demasiado lejos, afirmando algo que no pretendíamos en un principio? El criterio para responder a esta pregunta parte de la representación de la explicación informal y entra en el ámbito de la lógica y un conocimiento contextual más amplio.
 
 En nuestro ejemplo, podemos detectar inmediatamente que nuestras variables deben expresarse en al menos dos unidades diferentes (por ejemplo, $m^{2}$ e individuos). Debemos agregar un parámetro (una variable que permanece constante durante todo el proceso) para convertir cantidades de población en cantidades de área de asentamiento:
 
