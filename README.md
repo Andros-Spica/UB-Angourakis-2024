@@ -63,7 +63,7 @@ Existen al menos tres maneras de empezar esta etapa:
 2. **Del fenómeno a la evidencia y al mecanismo**: considerar primero un fenómeno ya documentado, estudiado y definido en otras disciplinas (por ejemplo, el comercio, desde una comprensión de la economía y la antropología). Luego, asumiendo que esté existió en un cierto contexto en el pasado, busca los dominios relevantes de evidencia que podrían apoyar o refutar dicha explicación (del medio a izquierda en la tabla). Asimismo, busca o formula un mecanismo que representa satisfactoriamente el fenómeno, tal cual definido previamente (del medio a la derecha de la tabla).
 3. **Del mecanismo al fenómeno y evidencia**: teniendo bajo foco un mecanismo (i.e. un modelo ya formalizado), buscar a un fenómeno y evidencias relacionadas que sean compatibles (i.e., que se puedan explicar a través del mecanismo).
 
-En todas rutas, no hay atajos: la solidez de la explicación dependerá de la profundidad y la amplitud del conocimiento previo sobre la evidencia y los fenómenos.
+En todas rutas, no hay atajos: la solidez de la explicación dependerá de la profundidad y la amplitud del conocimiento previo sobre la evidencia y los fenómenos. En todos los casos, empezar en una u otra ruta no significa que no se revisará las definiciones de la propuesta inicial. Por ejemplo, Si empezamos con una línea de evidencias y nos movemos a la definición de fenómeno y mecanismo, quizás nuestro tratamiento del tema como fenómeno nos llevará a reducir o ampliar el alcance de las evidencias consideradas. 
 
 ### Esbozo de un modelo conceptual *para modelado de simulación*
 
@@ -76,11 +76,11 @@ Vea algunos ejemplos de modelado conceptual en este tutorial: https://github.com
 
 ### El primer esbozo de un mecanismo
 
-La explicación seleccionada nunca es una definitiva o final, ni tampoco una declaración de creencias sesgadas (*mi* interpretación). La explicación inicial debería ser la chispa de inspiración que dirige el cómo  ordenamos nuestros conocimientos y creencias en busca de una coherencia lógica (formalización) y contrastamos, revisamos y ampliamos éstos elementos con nuevas evidencias (validación).
+La explicación seleccionada nunca es una definitiva o final, ni tampoco una declaración de creencias sesgadas (*mi* interpretación). La explicación inicial debería ser la chispa de inspiración que dirige el cómo  ordenamos nuestros conocimientos y creencias en busca de una coherencia lógica (formalización), la cual contrastaremos, revisaremos y ampliaremos con nuevas evidencias (validación).
 
-La **formalización de una explicación** es, de hecho, la tarea más difícil en el modelado de simulación, especialmente en dominios tan complejos como la arqueología. Implica, en primer lugar, una forma de pensar que va más allá de cualquier habilidad técnica, formación en matemáticas o jerga específica de la disciplina. Por lo tanto, debería *ejercitarse* en lugar de aprenderse.
+La **formalización de una explicación** es, de hecho, la tarea más difícil en el modelado de simulación, especialmente en dominios como la arqueología. Implica, en primer lugar, una forma de pensar que va más allá de cualquier habilidad técnica, formación en matemáticas o computación o conocimiento de jerga específica a una u otra disciplina. Por lo tanto, debería *ejercitarse* continuamente en lugar de aprenderse una sola vez.
 
-Si la explicación elegida ya está presente en modelos formales desarrollados por otros, probablemente podrías saltear esta etapa. Sin embargo, el uso, la adaptación o la combinación de modelos formales para otras líneas investigación requerirá una comprensión profunda de la formalización realizada y de cómo ésta se relaciona con los términos de vuestra evidencia, pregunta, etc.
+Si la explicación elegida ya está presente en modelos formales desarrollados por otros, probablemente podremos saltar esta etapa. Sin embargo, el uso, la adaptación o la combinación de modelos formales para otras líneas investigación requerirá una comprensión profunda de la formalización realizada y de cómo ésta se relaciona con los términos de vuestra evidencia, pregunta, etc. En este sentido, tendremos que tener especial cuidado en selecionar mecanismos formalizados y aplicados a dominios muy diferentes al de nuestro tema. Por ejemplo, un modelo que describe la explotación de recursos por poblaciones de hormigas podría ser útil para representar la explotación de recursos por poblaciones humanas, pero la adoptación y adaptación del modelo debe realizarse a consciencia de las diferencias entre dichos fenómenos.
 
 A modo de ejemplo, imaginemos que en nuestra investigación postulamos que:
 
@@ -98,12 +98,12 @@ También podemos simplificar esto dibujando un diagrama causal, un gráfico dond
 
 Si nos sentimos cómodos con expresiones algebraicas, podríamos intentar traducirlo a:
 
->settlementArea = *f*(población) = *f*( *g*(inmigración) )
+>settlementArea = *f*(population) = *f*( *g*(immigration) )
 
 o
 
->settlementArea = *f*(población)
->población = *g*(inmigración)
+>settlementArea = *f*(population)
+>population = *g*(immigration)
 
 donde *f* y *g* son funciones, aún por definir. Tales expresiones reformulan la explicación original de una manera más favorable a la formalización. Se leen como:
 
@@ -119,36 +119,36 @@ Sin ecuaciones para definir *f* y *g*, nuestro gráfico causal en realidad expre
 
 ¿Es ésta una descripción satisfactoria de nuestra explicación? ¿Deja de lado algo que asumimos implícitamente con nuestra primera explicación informal? ¿Está yendo demasiado lejos, afirmando algo que no pretendíamos en un principio? El criterio para responder a estas preguntas parte de la representación de la explicación informal y entra en el ámbito de la **lógica** y un **conocimiento contextual** más amplio.
 
-En nuestro ejemplo, podemos detectar inmediatamente que nuestras variables deben expresarse en al menos dos unidades diferentes (por ejemplo, $m^{2}$ e individuos). Debemos agregar un parámetro (una variable que permanece constante durante todo el proceso) para convertir cantidades de población en cantidades de área de asentamiento:
+En nuestro ejemplo, podemos detectar inmediatamente que nuestras variables deben expresarse en al menos dos unidades diferentes (por ejemplo, $m^{2}$ e individuos). Debemos añadir un parámetro (una variable que permanece constante durante todo el proceso) para convertir cantidades de población en cantidades de área de asentamiento. Lo llamaremos *areaPerInhabitant* ("area por cada habitante del asentamiento"):
 
 >settlementArea = *f*(areaPerInhabitant * population)
 
-Además, imaginemos que nos resulta insuficiente describir el cambio de población considerando solo la inmigración (es decir, *g*(inmigración)). No se puede saber cuántas manzanas hay en una canasta contando solo las que se agregan. Es decir, necesitamos una población inicial:
+Además, quizás nos resultará insuficiente describir el cambio de población considerando solo la inmigración (es decir, *g*(immigration)). En primer lugar, no se puede saber cuántas manzanas hay en un cesto contando solo las que se añaden. Es decir, necesitamos una población inicial:
 
->población = *g*(**población inicial**, inmigración)
+>population = *g*(initialPopulation, immigration)
 
-Siguiendo el mismo razonamiento, también debemos considerar que las variables pueden cambiar intrínsecamente debido al paso del tiempo:
+Siguiendo el mismo razonamiento, también debemos considerar que las variables pueden cambiar intrínsecamente (i.e., independientemente de *g*(immigration)) en función del paso del tiempo:
 
->áreaDeAsentamiento = *f*(áreaPorHabitante * población, **tiempo**)
->población = *g*(población inicial, inmigración, **tiempo**)
+>settlementArea = *f*(areaPerInhabitant * population, **time**)
+>population = *g*(initialPopulation, immigration, **time**)
 
-Si áreaDeAsentamiento y población cambian con (depende del) tiempo, ¿lo haría también la inmigración? Si es así, entonces también tendremos que considerar un término adicional, el parámetro que determina la tasa de cambio en la inmigración:
+Si el área del asentamiento y población cambian con (depende del) tiempo, ¿lo haría también la inmigración? Si es así, entonces también tendremos que considerar un término adicional, el parámetro que determina la tasa de cambio en la inmigración:
 
 >settlementArea = *f*(population, **time**)
 >population = *g*(initial population, immigration, **time**)
 >immigration = *h*(immigrationRate, **time**)
 
-Nuestro gráfico causal será en este punto considerablemente diferente, incluso cuando asumimos el tiempo como implícito:
+Nuestro gráfico causal será en este punto considerablemente diferente, incluso cuando asumimos el tiempo como implícito a todas las variables:
 
 ![ejemplo de modelo conceptual desarrollado](images/conceptual-model-example-2.png)
 
 Después de unas cuantas iteraciones de este proceso de razonamiento, nuestras expresiones formales seguramente crecerán en complejidad. Cuantas más variables y parámetros tenga un modelo explicativo de este tipo, más realismo y riqueza de escenarios permitirá. Sin embargo, las variables y los parámetros deberían entonces ser controlados por evidencia o al menos definidos de manera significativa.
 
-Depende de usted, a la luz del contexto y las preguntas de su investigación, decidir cuándo sacrificar la *representatividad* de su modelo para garantizar que pueda implementarse, comprenderse y validarse en el futuro.
+Depende de usted, a la luz del contexto y las preguntas de investigación, decidir cuándo sacrificar la *representatividad* de su modelo para garantizar que pueda *implementarse*, *comprenderse* y *validarse* en el futuro.
 
 ### Reutilización de estructuras consolidadas
 
-Cuando estemos satisfechos con una estructura de nuestro formalismo, podríamos reutilizarla para extender el modelo y representar aspectos similares o simétricos de los fenómenos, sin hacerlo menos inteligible. Por ejemplo, si nuestro modelo considera la inmigración como causa, también podríamos tener en cuenta un flujo de emigración con un efecto opuesto sobre la población.
+Cuando estemos satisfechos con una estructura en nuestro formalismo, podríamos reutilizarla para extender el modelo y representar aspectos similares o simétricos de los fenómenos, sin repetir los pasos anteriores o hacer el modelo menos inteligible. Por ejemplo, si nuestro modelo considera la inmigración como causa, también podríamos tener en cuenta un flujo de emigración con un efecto opuesto sobre la población.
 
 ![ejemplo de modelo conceptual desarrollado](images/conceptual-model-example-3.png)
 
@@ -156,7 +156,7 @@ Cuando estemos satisfechos con una estructura de nuestro formalismo, podríamos 
 
 Al representar procesos, debemos tener en cuenta que la causalidad no es necesariamente una relación unilateral. Como estamos factorizando el paso del tiempo, una variable puede modelarse para que se afecte a sí misma (en el futuro) o a otras variables que hayan influido previamente en su valor.
 
-Por ejemplo, la población afectará positivamente la cantidad de emigración en un tiempo determinado.
+Por ejemplo, dado nuestro conocimiento de contexto sobre *presión demográfica*, estipulemos que la población afecta positivamente la cantidad de emigración en un tiempo determinado:
 
 ![ejemplo de modelo conceptual desarrollado](images/conceptual-model-example-4.png)
 
@@ -164,7 +164,7 @@ Lectura:
 >La población (variable) es una función (depende de) la emigración (variable) como término negativo (-).
 >La emigración (variable) es una función (depende de) la población (variable) como término positivo (+).
 
-Con esta idea, podemos reemplazar el parámetro "población inicial" con un bucle positivo (población-población) y también mejorar nuestra representación de cómo funciona una población real y permitir una tasa de crecimiento que sea independiente de los flujos migratorios.
+Con esta idea, podemos reemplazar el parámetro "población inicial" con un bucle positivo (población-población), es decir, población inicial será simplemente el valor de población en el primer paso de tiempo. También podemos mejorar nuestra representación de una población real, definiendo un componente de la tasa de crecimiento que sea independiente de los flujos migratorios (*crecimiento natural*).
 
 ![ejemplo de modelo conceptual desarrollado](images/conceptual-model-example-5.png)
 
@@ -172,29 +172,29 @@ Con este nivel de formalización y complejidad, nuestro modelo comenzará a acer
 
 ### Expresar condiciones como bifurcaciones lógicas
 
-La mayoría de las veces, las explicaciones no se pueden formalizar únicamente con gráficos causales y expresiones algebraicas como las anteriores. Uno de los casos más comunes es cuando queremos representar un proceso que solo ocurre si se cumplen ciertas condiciones.
+La mayoría de las veces, las explicaciones no se pueden formalizar únicamente con gráficos causales y expresiones algebraicas como las anteriores. Uno de los casos más comunes es cuando queremos representar un proceso que solo ocurre si se cumplen ciertas condiciones: una bifurcación lógica.
 
 Imaginemos, por ejemplo, que nuestro modelo de población impulsado por la migración debe tener en cuenta el efecto combinado de dos factores:
 
 1. la relación política entre este asentamiento y los vecinos (amistosa/hostil)
-2. el estado general de las cosas del asentamiento (por ejemplo, un factor combinado de subsistencia, bienestar, disponibilidad de materia prima, etc.), resumido como tiempos *buenos* y *malos*.
+2. el estado general de prosperidad en el asentamiento (por ejemplo, un factor combinado de subsistencia, bienestar, disponibilidad de materia prima, etc.), resumido con una clasificación binaria entre *buenos* y *malos* tiempos.
 
-La introducción del factor 1 puede ser sencilla. Una relación hostil impedirá cualquier flujo de migración, entrante o saliente. El esquema correspondiente de un diagrama de flujo podría ser:
+La introducción del primer factor puede ser sencilla: una relación hostil impedirá cualquier flujo de migración, entrante o saliente. El esquema correspondiente de un diagrama de flujo podría ser:
 
 ![ejemplo de modelo conceptual desarrollado](images/conceptual-model-example-6.png)
 
-El factor 2 creará otra bifurcación, relevante solo si el vecindario del asentamiento es *amistoso*. Si los tiempos son *buenos*, asumiremos que se activa la inmigración, debido a que el asentamiento es atractivo para nuevos residentes. Si los tiempos son *malos*, se activa la emigración en su lugar, para representar el creciente número de habitantes que no están satisfechos con las condiciones de vida locales.
+El segundo factor creará otra bifurcación, relevante solo si el vecindario del asentamiento es *amistoso*. Si los tiempos son *buenos*, asumiremos que se activa la inmigración, debido a que el asentamiento es atractivo para nuevos residentes. Si los tiempos son *malos*, se activa la emigración en su lugar, para representar el creciente número de habitantes que no están satisfechos con las condiciones de vida locales.
 
 ![ejemplo de modelo conceptual desarrollado](images/conceptual-model-example-7.png)
 
-Cuanto más esté compuesto su modelo formal por algoritmos en lugar de ecuaciones, más complicado será el uso de diagramas causales y más fácil el uso de diagramas de flujo y otros diagramas (por ejemplo, los de UML). Sin embargo, en lo que respecta al desarrollo y la comunicación de modelos, CUALQUIER diagrama es mejor que ningún diagrama o formalismo conceptual.
+Cuanto más esté compuesto su modelo formal por algoritmos (operaciones discontínuas) en lugar de ecuaciones (operaciones conntínuas), más complicado será el uso de diagramas causales y más fácil el uso de diagramas de flujo y otros diagramas (por ejemplo, los de UML). Sin embargo, en lo que respecta al desarrollo y la comunicación de modelos, CUALQUIER diagrama es mejor que NINGÚN diagrama o formalismo conceptual.
 
 ### Epílogo: representación de mecanismos distribuidos y sociales
 
-Si buscamos un modelo formal capaz de dar cuenta de procesos distribuidos (que ocurren en paralelo a través de la acción de múltiples entidades) y mecanismos sociales adecuados, nuestro modelo conceptual debería avanzar hacia un marco basado en objetos y, eventualmente, en agentes. Hay muchas maneras de representar procesos distribuidos, como formular variables como vectores y matrices, si las ecuaciones siguen siendo un formato viable, o dibujar diagramas de flujo para prescribir el comportamiento de las entidades y su interacción potencial.
+Si buscamos un modelo formal capaz de dar cuenta de procesos distribuidos (que ocurren en paralelo a través de la acción de múltiples entidades) y mecanismos sociales más complejos (i.e. con múltiples dimensiones, no lineales), nuestro modelo conceptual debería avanzar hacia un marco basado en **objetos** y, eventualmente, en **agentes**. Hay muchas maneras de representar procesos distribuidos, como formular variables como **vectores** y **matrices**, si las ecuaciones siguen siendo un formato viable, o dibujar **diagramas de flujo** para prescribir el comportamiento de las entidades y su potencial interacción.
 
-Si nuestro modelo de población se formulara como basado en agentes, considerando a los hogares como las principales unidades de proceso, necesitaríamos definir su comportamiento de una manera que aún represente la esencia de la relación causal que buscamos formalizar:
+Si nuestro modelo de población se formulara como **basado en agentes**, considerando a los hogares como las principales unidades del proceso, necesitaríamos definir su comportamiento de una manera que, de manera agregada, aún represente la esencia de las relaciones causales que buscamos formalizar:
 
 ![ejemplo de modelo conceptual desarrollado](images/conceptual-model-example-8.png)
 
-Observe que una vez que el proceso se conceptualiza como distribuido, será cada vez más difícil mantener la descripción del modelo conceptual en una única expresión formal o diagrama.
+Observe que una vez que el proceso se conceptualiza como distribuido, será cada vez más difícil mantener la descripción del modelo conceptual en una única expresión formal o diagrama. Los modelos basados en agentes son efectivamente más intuitivos en un primer momento, pero son enormemente más complicados de describir en detalle.
